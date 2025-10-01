@@ -1,0 +1,268 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio - Breyson Meza</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 20px;
+      background: #000;
+    }
+    header h1 {
+      margin: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #222;
+      padding: 10px;
+    }
+    nav a {
+      margin: 0 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #007bff; /* Azul */
+    }
+    section {
+      display: none;
+      padding: 30px;
+    }
+    section.active {
+      display: block;
+    }
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      text-align: left;
+    }
+    img.perfil {
+      width: 180px;
+      border-radius: 50%;
+      margin: 15px 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    footer {
+      padding: 15px;
+      background: #111;
+      font-size: 14px;
+      text-align: center;
+    }
+    a.red {
+      color: #007bff;
+      text-decoration: none;
+    }
+    h2 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    /* Estilos para intro */
+    #intro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #intro.hidden {
+      display: none;
+    }
+    #intro h1 span {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.5s forwards;
+    }
+    /* Animación palabra por palabra (7 palabras) */
+    #intro h1 span:nth-child(1) { animation-delay: 0.3s; }
+    #intro h1 span:nth-child(2) { animation-delay: 0.8s; }
+    #intro h1 span:nth-child(3) { animation-delay: 1.3s; }
+    #intro h1 span:nth-child(4) { animation-delay: 1.8s; }
+    #intro h1 span:nth-child(5) { animation-delay: 2.3s; }
+    #intro h1 span:nth-child(6) { animation-delay: 2.8s; }
+    #intro h1 span:nth-child(7) { animation-delay: 3.3s; }
+
+    #intro p {
+      margin-top: 20px;
+      font-size: 1.3rem;
+      color: #007bff;
+      opacity: 0;
+      animation: fadeUp 0.5s forwards;
+      animation-delay: 3.8s;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Intro automático con animación -->
+  <div id="intro">
+    <h1>
+      <span>Bienvenido</span>
+      <span>a</span>
+      <span>mi</span>
+      <span>portafolio</span>
+      <span>personal</span>
+      
+      <span>"No tengas miedo de fallar, ten miedo de no intentarlo"</span>
+      <span></span>
+    </h1>
+    <p>Tu motivación para avanzar</p>
+  </div>
+
+  <header>
+    <h1>BREYSON MEZA LONDOÑO</h1>
+    <p>Bienvenido a mi portafolio</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Sena_Colombia_logo.svg" width="120" alt="Logo SENA" />
+  </header>
+
+  <nav>
+    <a href="#" onclick="mostrarSeccion('descripcion')">Descripción</a>
+    <a href="#" onclick="mostrarSeccion('sobre')">Acerca de mí</a>
+    <a href="#" onclick="mostrarSeccion('proyecto')">Proyecto</a>
+    <a href="#" onclick="mostrarSeccion('habilidades')">Habilidades</a>
+    <a href="#" onclick="mostrarSeccion('estudios')">Estudios</a>
+    <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+  </nav>
+
+  <!-- SECCIONES -->
+  <section id="descripcion" class="active">
+    <div class="card">
+      <h2>⚡ Descripción Rápida</h2>
+      <p>Tengo 17 años, soy creativo, apasionado por la tecnología y siempre busco innovar y superarme.</p>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="card">
+      <h2>👤 Acerca de Mí</h2>
+      
+      <p>
+        Soy un joven de 17 años con gran pasión por la tecnología, la creatividad y la innovación. Actualmente, soy aprendiz del SENA en <b>Análisis y Desarrollo de Software</b>, formación que complemento con conocimientos en <b>Python, HTML, CSS, PseInt y otros lenguajes</b> que estoy practicando y aprendiendo.
+      </p>
+      <p>
+        Mi experiencia se refleja en la creación de páginas web, el desarrollo de ideas para aplicaciones y videojuegos, así como en proyectos personales como <b>Warforge</b>, un juego propio que busca mezclar lo moderno con lo medieval para ofrecer una experiencia única.
+      </p>
+      <p>
+        A lo largo de mi proceso he fortalecido habilidades como la <b>creatividad, la resolución de problemas, la constancia y la capacidad de aprendizaje autónomo</b>, lo que me permite adaptarme a nuevos retos y seguir creciendo en el ámbito tecnológico.
+      </p>
+    </div>
+  </section>
+
+  <section id="proyecto">
+    <div class="card">
+      <h2>🚀 Mi Proyecto</h2>
+      <h3>Proyecto de Vida</h3>
+      <p>
+        Primero que todo, quiero <b>superarme y culminar mis estudios</b> en el SENA y en todo el camino académico que me proponga.
+        Tengo la meta de <b>ser reconocido por mi esfuerzo y mis méritos propios</b>, construyendo un camino en el que cada logro sea fruto de mi dedicación.
+      </p>
+      <p>
+        Otro de mis grandes objetivos es <b>ayudar a muchas personas</b> con lo que aprenda y con lo que logre crear. Quiero que mis conocimientos en tecnología y mis proyectos sirvan para aportar valor a los demás.
+      </p>
+      <h3>Proyecto Creativo: Warforge</h3>
+      <p>
+        Además de mis metas personales, estoy trabajando en un proyecto creativo llamado <b>Warforge</b>, un juego que busca ser épico, inmersivo y diferente, mezclando lo moderno con lo medieval.
+      </p>
+    </div>
+  </section>
+
+  <section id="habilidades">
+    <div class="card">
+      <h2>💡 Mis Habilidades</h2>
+      <h3>Lenguajes de Programación</h3>
+      <ul>
+        <li>🐍 Python → 70%</li>
+        <li>🌐 HTML → 85%</li>
+        <li>🎨 CSS → 65%</li>
+        <li>⚡ JavaScript → 60%</li>
+        <li>☕ Java → 50%</li>
+        <li>📘 PseInt → 80%</li>
+      </ul>
+      <h3>Otras habilidades</h3>
+      <ul>
+        <li>📱 Ideas para apps y juegos.</li>
+        <li>🎨 Creatividad y diseño.</li>
+        <li>🧩 Resolución de problemas.</li>
+        <li>🔥 Motivación y constancia.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="estudios">
+    <div class="card">
+      <h2>📚 Mis Estudios</h2>
+      <ul>
+        <li><b>Colegio Eva Rodríguez Araujo</b> – Bachiller (2018 - 2024)</li>
+        <li><b>SENA</b> – Operación de Servicios en Contact Center y BPO (2023 - 2024)</li>
+        <li><b>SENA</b> – Análisis y Desarrollo de Software (En proceso)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <div class="card">
+      <h2>📞 Contacto</h2>
+      <p><b>Correo:</b> <a class="red" href="mailto:breysonmezalondono@gmail.com">breysonmezalondono@gmail.com</a></p>
+      <p><b>Instagram:</b> <a class="red" href="https://www.instagram.com/brey08_25mb" target="_blank">@brey08_25mb</a></p>
+      <p>👉 Si quieres hablar conmigo, colaborar en un proyecto o simplemente compartir ideas, aquí tienes un espacio para escribirme:</p>
+      <form>
+        <label>Nombre:</label><br />
+        <input type="text" style="padding:5px; width:80%;" /><br /><br />
+        <label>Correo electrónico:</label><br />
+        <input type="email" style="padding:5px; width:80%;" /><br /><br />
+        <label>Número de teléfono:</label><br />
+        <input type="text" style="padding:5px; width:80%;" /><br /><br />
+        <button type="submit" style="padding:10px 20px; background:#007bff; color:#fff; border:none; border-radius:5px;">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Breyson Meza Londoño - Todos los derechos reservados
+  </footer>
+
+  <script>
+    function mostrarSeccion(id) {
+      let secciones = document.querySelectorAll("section");
+      secciones.forEach((sec) => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+    }
+
+    // Mostrar intro 4 segundos y luego ocultar
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("intro").classList.add("hidden");
+      }, 4000); // 4 segundos
+    });
+  </script>
+</body>
+</html>
+
